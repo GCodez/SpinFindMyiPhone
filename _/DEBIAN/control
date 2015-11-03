@@ -1,0 +1,10 @@
+Package: com.gulam.spinfindmyiphone
+Name: SpinFindMyiPhone
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Dynamically rotating FindMyiPhone app icon(Based on SpinSettings)
+Maintainer: Gulam Mustafa
+Author: Gulam Mustafa
+Section: Tweaks
+Version: 0.0.1-3
+Installed-Size: 232

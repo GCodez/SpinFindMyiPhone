@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>SpinFindMyiPhone</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.gulam.spinfindmyiphone/settingschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.gulam.spinfindmyiphone</string>
+			<key>key</key>
+			<string>enableSFMITweak</string>
+			<key>label</key>
+			<string>Enable Tweak</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+			<key>footerText</key>
+			<string>*Default is 1(Higher values = slower speed)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.gulam.spinfindmyiphone</string>
+			<key>key</key>
+			<string>SFMISpeed</string>
+			<key>label</key>
+			<string>Spin Speed</string>
+			<key>PostNotification</key>
+			<string>com.gulam.spinfindmyiphone/settingschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Save</string>
+			<key>action</key>
+			<string>save</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>About</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>Mytwitter</string>
+			<key>alignment</key>
+			<string>center</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>@me_salman148</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Options</string>
+</dict>
+</plist>
