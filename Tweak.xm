@@ -36,7 +36,7 @@ static BOOL enableSFMITweak = NO;
 @implementation SBLiveIconImageView
 @end
 
-@interface SBSettingsIconImageView : SBLiveIconImageView
+@interface SFSettingsIconImageView : SBLiveIconImageView
 -(id)initWithFrame:(CGRect)frame;
 - (UIImageView*)dcImage;
 - (void)setDcImage:(UIImageView*)value;
@@ -57,7 +57,7 @@ static BOOL enableSFMITweak = NO;
 -(BOOL)isUILocked;
 @end
 
-%subclass SBSettingsIconImageView : SBLiveIconImageView
+%subclass SFSettingsIconImageView : SBLiveIconImageView
 
 %new - (UIImageView*)dcImage
 {
@@ -170,11 +170,11 @@ static BOOL enableSFMITweak = NO;
 }
 %end
 
-%subclass SBSettingsApplicationIcon : SBApplicationIcon
+%subclass SFSettingsApplicationIcon : SBApplicationIcon
 
 -(Class)iconImageViewClassForLocation:(int)arg1
 {
-	return %c(SBSettingsIconImageView);
+	return %c(SFSettingsIconImageView);
 }
 
 %end
@@ -197,9 +197,9 @@ static BOOL enableSFMITweak = NO;
 	NSString * identifier = MSHookIvar<NSString*>(self,"_bundleIdentifier");
 
 	if([identifier isEqualToString:@"com.apple.mobileme.fmip1"]){
-		return %c(SBSettingsApplicationIcon);
+		return %c(SFSettingsApplicationIcon);
 		//If we just return orig here in order to disable the tweak, we would have to respring for any changes to be applied.
-		//Thus hiding the view through functions in the SBSettingsIconImageView class is an alternative that does not require a respring.
+		//Thus hiding the view through functions in the SFSettingsIconImageView class is an alternative that does not require a respring.
 	}
 	else
 		return orig;
@@ -216,9 +216,9 @@ static BOOL enableSFMITweak = NO;
 	if ([[icon leafIdentifier] isEqualToString:@"com.apple.mobileme.fmip1"])
 	{
 		NSLog(@"_setIcon for Preferences");
-		SBSettingsIconImageView * img = MSHookIvar<SBSettingsIconImageView*>(self,"_iconImageView");
+		SFSettingsIconImageView * img = MSHookIvar<SFSettingsIconImageView*>(self,"_iconImageView");
 
-		if([img isKindOfClass:%c(SBSettingsIconImageView)])
+		if([img isKindOfClass:%c(SFSettingsIconImageView)])
 		{
 			NSLog(@"Our image ivar is of the correct class.");
 			[img setDynamicFrame:[img bounds]];
