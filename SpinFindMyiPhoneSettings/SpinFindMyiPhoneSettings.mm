@@ -23,6 +23,12 @@
 
 }
 
+-(void)Sourcecode {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/GCodez/SpinFindMyiPhone"]];
+    
+}
+
 -(void)save
 {
     [self.view endEditing:YES];

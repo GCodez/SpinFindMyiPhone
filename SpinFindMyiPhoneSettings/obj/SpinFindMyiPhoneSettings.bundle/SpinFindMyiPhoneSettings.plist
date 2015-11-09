@@ -22,7 +22,7 @@
 			<key>key</key>
 			<string>enableSFMITweak</string>
 			<key>label</key>
-			<string>Enable Tweak</string>
+			<string>Enable Spin</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -33,6 +33,8 @@
 			<string>*Default is 1(Higher values = slower speed)</string>
 		</dict>
 		<dict>
+			<key>PostNotification</key>
+			<string>com.gulam.spinfindmyiphone/settingschanged</string>
 			<key>cell</key>
 			<string>PSEditTextCell</string>
 			<key>defaults</key>
@@ -41,16 +43,14 @@
 			<string>SFMISpeed</string>
 			<key>label</key>
 			<string>Spin Speed</string>
-			<key>PostNotification</key>
-			<string>com.gulam.spinfindmyiphone/settingschanged</string>
 		</dict>
 		<dict>
+			<key>action</key>
+			<string>save</string>
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
 			<string>Save</string>
-			<key>action</key>
-			<string>save</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -62,14 +62,28 @@
 			<key>action</key>
 			<string>Mytwitter</string>
 			<key>alignment</key>
-			<string>center</string>
+			<string>left</string>
 			<key>cell</key>
 			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>Twitter.png</string>
 			<key>label</key>
 			<string>@me_salman148</string>
 		</dict>
+		<dict>
+			<key>action</key>
+			<string>Sourcecode</string>
+			<key>alignment</key>
+			<string>left</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>github.png</string>
+			<key>label</key>
+			<string>Source Code</string>
+		</dict>
 	</array>
 	<key>title</key>
-	<string>Options</string>
+	<string>SpinFindMyiPhone</string>
 </dict>
 </plist>
