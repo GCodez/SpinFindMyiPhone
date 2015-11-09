@@ -1,2 +1,2 @@
 # SpinFindMyiPhone
-Still in progress
+Dynamically rotating FindMyiPhone app icon
